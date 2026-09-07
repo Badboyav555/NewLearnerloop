@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn | LearnLoop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="dashboard.html" class="logo">Learn<span>Loop</span></a>
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learn.html">Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="progress.html">Progress</a>
+            <a href="#" onclick="logout()" class="profile-circle">S</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p class="small-heading">YOUR LEARNING SPACE</p>
+        <h1 class="page-title">Learn at Your Own Pace 📚</h1>
+        <p class="page-desc">Explore your subjects, revise concepts, access notes and practice what you learn.</p>
+        
+        <h2 style="margin-bottom: 20px;">My Subjects</h2>
+        <div class="subject-grid">
+            <div class="subject-card"><div style="font-size:35px; margin-bottom:15px;">📐</div><h3>Engineering Mathematics</h3><p>0% Completed</p><div class="progress-bar" style="margin: 15px 0;"><div class="progress-fill" style="width: 0%;"></div></div><button class="learn-btn">Explore Subject →</button></div>
+            <div class="subject-card"><div style="font-size:35px; margin-bottom:15px;">⚡</div><h3>Engineering Physics</h3><p>0% Completed</p><div class="progress-bar" style="margin: 15px 0;"><div class="progress-fill" style="width: 0%;"></div></div><button class="learn-btn">Explore Subject →</button></div>
+            <div class="subject-card"><div style="font-size:35px; margin-bottom:15px;">💻</div><h3>Programming</h3><p>0% Completed</p><div class="progress-bar" style="margin: 15px 0;"><div class="progress-fill" style="width: 0%;"></div></div><button class="learn-btn">Explore Subject →</button></div>
+        </div>
+
+        <h2 style="margin: 30px 0 20px;">Topics</h2>
+        <div class="topic-card">
+            <div class="topic-content"><h3>Matrices</h3><p style="color: #666; line-height: 1.5;">Learn the basics of matrices, operations and important concepts.</p><div class="topic-actions"><button onclick="openLearning('Matrices')">📖 Learn</button><button onclick="openNotes('Matrices')">📝 Notes</button></div></div>
+        </div>
+        <div class="topic-card">
+            <div class="topic-content"><h3>Eigenvalues & Eigenvectors</h3><p style="color: #666; line-height: 1.5;">Understand eigenvalues, eigenvectors and their applications.</p><div class="topic-actions"><button onclick="openLearning('Eigenvalues')">📖 Learn</button><button onclick="openNotes('Eigenvalues')">📝 Notes</button></div></div>
+        </div>
+    </div>
+
+    <div class="learn-popup" id="learnPopup">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closeLearnPopup()">×</button>
+            <div style="font-size: 40px;" id="popupIcon">📖</div>
+            <h2 id="popupTitle">Learning</h2>
+            <p id="popupMessage" style="color: #666; line-height: 1.6; margin-top: 10px;">Content will appear here.</p>
+            <button class="primary-btn" style="margin-top: 20px;" onclick="closeLearnPopup()">Got it !</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
