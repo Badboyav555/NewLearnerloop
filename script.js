@@ -1,6 +1,6 @@
 // ⚠️ YAHAN APNI SUPABASE DETAILS DAAL (SABSE ZAROORI STEP)
-const SUPABASE_URL = "TERI_SUPABASE_URL_YAHAN";
-const SUPABASE_KEY = "TERI_SUPABASE_ANON_KEY_YAHAN";
+const SUPABASE_URL = "https://hafkxgipiqjmjhevjlsc.supabase.co";
+const SUPABASE_KEY = "sb_publishable_cbG1R6WokyUczPW4OWLHww_hqlM0JGg";
 
 let supabase;
 try {
