@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress | LearnLoop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="dashboard.html" class="logo">Learn<span>Loop</span></a>
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learn.html">Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="progress.html">Progress</a>
+            <a href="#" onclick="logout()" class="profile-circle">S</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p class="small-heading">YOUR LEARNING JOURNEY</p>
+        <h1 class="page-title">Progress & Achievements 🏆</h1>
+        <p class="page-desc">Track your growth, celebrate your achievements, and keep improving every day.</p>
+
+        <div class="dashboard-section">
+            <h2 style="margin-bottom: 20px;">Overall Progress 📊</h2>
+            <div class="stats-container" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="stat-card"><div class="stat-icon">📚</div><div><h3>0</h3><p>Lessons Completed</p></div></div>
+                <div class="stat-card"><div class="stat-icon">🎯</div><div><h3 id="progAccuracy">0%</h3><p>Quiz Accuracy</p></div></div>
+                <div class="stat-card"><div class="stat-icon">🔥</div><div><h3 id="progStreak">0</h3><p>Day Streak</p></div></div>
+            </div>
+        </div>
+
+        <div class="dashboard-section" style="margin-top: 25px;">
+            <h2 style="margin-bottom: 20px;">Subject-wise Progress 📚</h2>
+            <div class="learning-card" style="margin-bottom: 15px;">
+                <div class="subject-icon">📐</div>
+                <div class="learning-info"><h3>Engineering Mathematics</h3><div class="progress-bar" style="margin-top: 10px;"><div class="progress-fill" style="width: 72%;"></div></div></div>
+            </div>
+            <div class="learning-card">
+                <div class="subject-icon">⚡</div>
+                <div class="learning-info"><h3>Engineering Physics</h3><div class="progress-bar" style="margin-top: 10px;"><div class="progress-fill" style="width: 81%;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
