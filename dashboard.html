@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | LearnLoop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="dashboard.html" class="logo">Learn<span>Loop</span></a>
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learn.html">Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="progress.html">Progress</a>
+            <a href="#" onclick="logout()" class="profile-circle">S</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p class="small-heading">YOUR LEARNING SPACE</p>
+        <h1 class="page-title">Good Morning, <span id="studentName">Student</span> 👋</h1>
+        <p class="page-desc">Ready to continue your learning journey?</p>
+        
+        <div class="stats-container">
+            <div class="stat-card"><div class="stat-icon">📚</div><div><h3>0</h3><p>Lessons Completed</p></div></div>
+            <div class="stat-card"><div class="stat-icon">🎯</div><div><h3 id="dashAccuracy">0%</h3><p>Quiz Accuracy</p></div></div>
+            <div class="stat-card"><div class="stat-icon">🔥</div><div><h3 id="streakCount">0</h3><p>Day Streak</p></div></div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-left">
+                <div class="dashboard-section">
+                    <div class="section-heading"><div><h2>Continue Learning</h2><p>Pick up where you left off</p></div></div>
+                    <div class="learning-card">
+                        <div class="subject-icon">📐</div>
+                        <div class="learning-info"><h3>Engineering Mathematics</h3><p>Matrices</p><div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div></div>
+                        <a href="learn.html" class="primary-btn">Continue →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-right">
+                <div class="challenge-card">
+                    <h2>Test your knowledge</h2><p>5 questions • 5 minutes</p>
+                    <a href="challenge.html" style="text-decoration:none;"><button>Start Challenge →</button></a>
+                </div>
+                <div class="dashboard-section">
+                    <div class="section-heading"><div><h2>Quick Actions</h2></div></div>
+                    <a href="ai.html" class="primary-btn" style="display:block; text-align:center; margin-bottom:10px;">🤖 Ask LearnLoop AI</a>
+                    <a href="learn.html" class="secondary-btn" style="display:block; text-align:center;">📚 Explore Subjects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
