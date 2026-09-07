@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenge | LearnLoop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="dashboard.html" class="logo">Learn<span>Loop</span></a>
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learn.html">Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="progress.html">Progress</a>
+            <a href="#" onclick="logout()" class="profile-circle">S</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p class="small-heading">DAILY PRACTICE</p>
+        <h1 class="page-title">Daily Challenge 🧠</h1>
+        <p class="page-desc">Test your knowledge, improve your accuracy and keep your learning streak alive.</p>
+
+        <div class="quiz-card" id="quizCard">
+            <div class="quiz-top"><span id="questionNumber">Question 1 of 5</span><span class="timer" id="timer">⏱️ 05:00</span></div>
+            <div class="quiz-progress"><div id="quizProgress" class="quiz-progress-fill"></div></div>
+            <p class="question-subject" id="questionSubject">Mathematics</p>
+            <h2 id="questionText" style="font-size: 23px; line-height: 1.5;">Loading question...</h2>
+            <div class="options" id="optionsContainer"></div>
+            <button class="primary-btn" style="width: 100%; margin-top: 20px;" onclick="nextQuestion()">Next Question →</button>
+        </div>
+
+        <div class="result-card" id="resultCard">
+            <div style="font-size: 55px;">🏆</div>
+            <h1>Great Job! 🎉</h1>
+            <p id="resultMessage">You completed today's challenge.</p>
+            <div class="score-circle"><span id="finalScore">0/5</span></div>
+            <div style="display: flex; justify-content: center; gap: 60px; margin: 25px 0;">
+                <div><h3 id="correctAnswers" style="font-size: 25px;">0</h3><span>Correct</span></div>
+                <div><h3 id="wrongAnswers" style="font-size: 25px;">0</h3><span>Wrong</span></div>
+                <div><h3 id="accuracy" style="font-size: 25px;">0%</h3><span>Accuracy</span></div>
+            </div>
+            <button class="primary-btn" onclick="restartQuiz()">🔄 Try Again</button>
+            <a href="dashboard.html" class="secondary-btn" style="margin-top: 10px;">← Dashboard</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
