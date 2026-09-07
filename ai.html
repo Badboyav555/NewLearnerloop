@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLoop AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="dashboard.html" class="logo">Learn<span>Loop</span></a>
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learn.html">Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="progress.html">Progress</a>
+            <a href="#" onclick="logout()" class="profile-circle">S</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p class="small-heading">YOUR PERSONAL STUDY ASSISTANT</p>
+        <h1 class="page-title">Meet LearnLoop AI 🤖</h1>
+        <p class="page-desc">Stuck on a concept? Ask your doubt and LearnLoop AI will help you understand it.</p>
+
+        <div class="ai-card">
+            <div class="ai-section"><label>Choose a subject</label><select id="aiSubject"><option value="">Select Subject</option><option value="math">Mathematics</option><option value="phy">Physics</option><option value="prog">Programming</option></select></div>
+            <div class="ai-section"><label>Try a quick question</label><div style="display:flex; flex-wrap:wrap; gap:10px;"><button style="padding: 10px 15px; border: 1px solid #dddddd; background: #fafafa; border-radius: 20px; cursor: pointer;" onclick="quickQuestion('What is a matrix?')">What is a matrix?</button><button style="padding: 10px 15px; border: 1px solid #dddddd; background: #fafafa; border-radius: 20px; cursor: pointer;" onclick="quickQuestion('What are eigenvalues?')">What are eigenvalues?</button></div></div>
+            <div class="ai-section"><label>Your question</label><textarea id="aiQuestion" placeholder="Type your doubt here..." rows="4"></textarea></div>
+            <button class="ask-ai-btn" onclick="askLearnLoopAI()">✨ Ask LearnLoop AI</button>
+            <div class="ai-response" id="aiResponse">
+                <p id="responseText">Your AI explanation will appear here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
